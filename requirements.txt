@@ -1,2 +1,1 @@
-jupyter-book
-myst-parser
+jupyter-book==0.15.1
