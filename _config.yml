@@ -1,0 +1,13 @@
+title: Deepfake Detection CNN
+author: David Moser
+only_build_toc_files: true
+execute:
+  execute_notebooks: "off"
+html:
+  use_repository_button: true
+  use_issues_button: true
+  use_edit_page_button: true
+repository:
+  url: https://github.com/bigblueshoe777/deepfake-cnn-book
+  path_to_book: .
+  branch: main
