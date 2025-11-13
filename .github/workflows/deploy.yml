@@ -20,7 +20,18 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
       - name: Build the book
-        run: jupyter-book build .
+        run: |
+          jupyter-book --version
+          jupyter-book build .
+          echo "--- repo root ---"
+          ls -lah
+          echo "--- _build ---"
+          ls -lah _build || true
+          echo "--- _build/html ---"
+          ls -lah _build/html || true
+          echo "Expecting: _build/html/index.html"
+          test -f _build/html/index.html
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
